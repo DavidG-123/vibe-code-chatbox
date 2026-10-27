@@ -1,0 +1,180 @@
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  padding: clamp(10px, 5vw, 50px);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: clamp(300px, 90vw, 500px);
+  margin: 0 auto;
+  background: white;
+  padding: clamp(15px, 4vw, 30px);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  margin-bottom: clamp(15px, 3vw, 25px);
+}
+
+#setup {
+  margin-bottom: clamp(15px, 3vw, 20px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 2vw, 15px);
+}
+
+.setup-join {
+  display: flex;
+  gap: clamp(8px, 1.5vw, 12px);
+  flex-wrap: wrap;
+}
+
+.setup-join input {
+  flex: 1;
+  min-width: 150px;
+}
+
+#info {
+  margin-bottom: clamp(15px, 3vw, 20px);
+  padding: clamp(10px, 2vw, 15px);
+  background: #f0f0f0;
+  border-radius: 5px;
+  display: none;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+#code {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: green;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#chat {
+  display: none;
+  border: 1px solid #ccc;
+  padding: clamp(10px, 2vw, 15px);
+  height: clamp(200px, 50vh, 400px);
+  overflow-y: auto;
+  margin-bottom: clamp(10px, 2vw, 15px);
+  background: #fafafa;
+  border-radius: 5px;
+}
+
+#messages {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(5px, 1vw, 8px);
+}
+
+.msg {
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  padding: clamp(5px, 1vw, 8px);
+  background: #e3f2fd;
+  border-radius: 4px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.mine {
+  color: #1976d2;
+  text-align: right;
+  background: #bbdefb;
+}
+
+#status {
+  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+  color: #666;
+  margin-bottom: clamp(10px, 2vw, 15px);
+  min-height: 20px;
+}
+
+#sendDiv {
+  display: none;
+  display: flex;
+  gap: clamp(8px, 1.5vw, 12px);
+  flex-direction: column;
+}
+
+textarea {
+  width: 100%;
+  padding: clamp(8px, 1.5vw, 12px);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  resize: vertical;
+  min-height: 50px;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #1976d2;
+  box-shadow: 0 0 5px rgba(25, 118, 210, 0.3);
+}
+
+input {
+  padding: clamp(8px, 1.5vw, 12px);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+input:focus {
+  outline: none;
+  border-color: #1976d2;
+  box-shadow: 0 0 5px rgba(25, 118, 210, 0.3);
+}
+
+button {
+  padding: clamp(8px, 1.5vw, 12px) clamp(12px, 2vw, 20px);
+  cursor: pointer;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: clamp(0.85rem, 1.8vw, 1rem);
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #1565c0;
+}
+
+button:active {
+  background: #0d47a1;
+}
+
+/* Mobile optimizations */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  
+  .container {
+    padding: 15px;
+  }
+  
+  #chat {
+    height: 40vh;
+  }
+  
+  #sendDiv {
+    flex-direction: column;
+  }
+  
+  textarea {
+    width: 100%;
+  }
+}

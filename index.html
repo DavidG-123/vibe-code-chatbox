@@ -1,0 +1,38 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PeerJS Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>PeerJS Chat</h2>
+    
+    <div id="setup">
+      <button onclick="host()">Host</button>
+      <div class="setup-join">
+        <input id="joinCode" placeholder="Enter host code" />
+        <button onclick="join()">Join</button>
+      </div>
+    </div>
+
+    <div id="info">
+      <strong>Your Code:</strong> <span id="code"></span>
+    </div>
+
+    <div id="chat"><div id="messages"></div></div>
+    <div id="status"></div>
+
+    <div id="sendDiv">
+      <textarea id="msgInput" placeholder="Type message..." rows="2"></textarea>
+      <button onclick="send()">Send</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/peerjs@1.4.7/dist/peerjs.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
